@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>News</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let data of articles" (click)="singleNewView(data)">
+    <ion-img [src]="data.urlToImage"></ion-img>
+
+    <ion-card-content>
+      <ion-card-title>{{data.title}}</ion-card-title>
+      <p>{{data.description}}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
